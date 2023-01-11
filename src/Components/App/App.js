@@ -28,7 +28,8 @@ const App = () => {
   }, [])
 
   return (
-    <Home></Home>
+
+    <Home allMons={allGen1}></Home>
   )
 }
 
