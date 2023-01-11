@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import './App.css'
+import Header from '../Header/Header';
+import Home from '../Home/Home';
 
 const App = () => {
   const [e, setError] = useState('')
@@ -25,7 +27,9 @@ const App = () => {
     getGen1()
   }, [])
 
-  return 
+  return (
+    <Home></Home>
+  )
 }
 
 export default App;
