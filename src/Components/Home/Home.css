@@ -1,0 +1,9 @@
+.logo-cont {
+  display:flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.logo {
+  width:30%;
+}
