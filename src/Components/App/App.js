@@ -1,12 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import './App.css'
-import Header from '../Header/Header';
 import Home from '../Home/Home';
 
 const App = () => {
   const [e, setError] = useState('')
-  const [currentWild, setWild] = useState([])
   const [allGen1, setGen1] = useState([])
 
   const getGen1 = async () => {
@@ -17,7 +15,7 @@ const App = () => {
           Accept: "application/json",
         },
       });
-      setGen1(response.data);
+      setGen1(response.data.results);
     } catch (e) {
       setError(e)
       console.log(e);
@@ -26,9 +24,9 @@ const App = () => {
   useEffect(() => {
     getGen1()
   }, [])
-
+ 
   return (
-    <Home></Home>
+    <Home allMons={allGen1}></Home>
   )
 }
 

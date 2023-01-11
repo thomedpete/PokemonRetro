@@ -1,12 +1,28 @@
-import * as React from 'react';
+import React from 'react';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
-import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
 
 
-const WildPokemonBox = () => {
+const WildPokemonBox = ({all151}) => {
+ 
+  
+  const setCurrentWild = (array) =>  {
+    let currentWildArray = [];
+    array.forEach(item => {
+      if (currentWildArray.length < 6) {
+        let randomIndex = Math.floor(Math.random() * array.length);
+        let randomObject = array[randomIndex];
+        if (!currentWildArray.some(x => x === randomObject)) {
+          currentWildArray.push(randomObject);
+        }
+      }
+    });
+    return currentWildArray;
+  }
+  let currentWild = setCurrentWild(all151)
+
   return (
   <Card sx={{ maxWidth: 345 }}>
     <CardActionArea>
