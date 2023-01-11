@@ -7,7 +7,7 @@ import WildPokemonBox from '../WildPokemonBox/WildPokemonBox';
 
 
 
-const Home = ({allMons}) => {
+const Home = ({ allMons }) => {
   return (
     <div className='home'>
       <Box className='logo-cont' ><img className='logo'
