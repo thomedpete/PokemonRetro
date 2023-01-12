@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import axios from 'axios';
 import './App.css'
 import Home from '../Home/Home';
 
@@ -28,25 +27,8 @@ const App = () => {
     fetchPokemon()
   }, [])
 
- 
 
 
-  // const getGen1 = async () => {
-  //   let url = "https://pokeapi.co/api/v2/pokemon?limit=151";
-  //   try {
-  //     const rez = await axios(url, {
-  //       headers: {
-  //         Accept: "application/json",
-  //       },
-  //     });
-  //     setGen1(rez.data.results);
-  //   } catch (e) {
-  //     setError(e)
-  //     console.log(e);
-  //   }
-  // }
-  
- 
   return (
     <Home allMons={allPokemon} ></Home>
   )
