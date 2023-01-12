@@ -1,35 +1,33 @@
 import React, { useEffect, useState } from 'react';
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import { CardActionArea } from '@mui/material';
 import './WildPokemonBox.css'
-import pMap from 'p-map';
-import axios from 'axios';
+
 
 const WildPokemonBox = ({all151}) => {
 
-  // const setCurrentWild = (array) =>  {
-  //   let currentWildArray = [];
-  //   array.forEach(item => {
-  //     if (currentWildArray.length < 6) {
-  //       let randomIndex = Math.floor(Math.random() * array.length);
-  //       let randomObject = array[randomIndex];
-  //       if (!currentWildArray.some(x => x === randomObject)) {
-  //         currentWildArray.push(randomObject);
-  //       }
-  //     }
-  //   });
-  //   return currentWildArray;
-  // }
+  const setCurrentWild = (array) =>  {
+    let currentWildArray = [];
+    array.forEach(item => {
+      if (currentWildArray.length < 6) {
+        let randomIndex = Math.floor(Math.random() * array.length);
+        let randomObject = array[randomIndex];
+        if (!currentWildArray.some(x => x === randomObject)) {
+          currentWildArray.push(randomObject);
+        }
+      }
+    });
+    return currentWildArray;
+  }
   
-  // setCurrentWild(all151)
+
   const displayPokemon = (pokemon) => {
+    let counter = 0;
+  
     const pokemonHTMLString = pokemon.map((monster) => {
+      counter++;
       return (
-        <li className="card">
+        <div className="card" id={counter}>
           <img className="card-image" src={monster.image} />
-        </li>
+       </div>
       )
     })
     return pokemonHTMLString
@@ -38,7 +36,7 @@ const WildPokemonBox = ({all151}) => {
     
   return (
   <div className='wild'>
-       {displayPokemon(all151)}
+      {displayPokemon(setCurrentWild(all151))}
   </div>
   )
 }
