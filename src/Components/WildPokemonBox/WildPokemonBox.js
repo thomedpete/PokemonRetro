@@ -1,3 +1,4 @@
+import { Button } from '@mui/material';
 import React, { useEffect, useState } from 'react';
 import './WildPokemonBox.css'
 
@@ -18,7 +19,6 @@ const WildPokemonBox = ({all151}) => {
     return currentWildArray;
   }
   
-
   const displayPokemon = (pokemon) => {
     let counter = 0;
   
@@ -26,7 +26,11 @@ const WildPokemonBox = ({all151}) => {
       counter++;
       return (
         <div className="card" id={counter}>
+          <Button onClick={() => {
+            alert('clicked');//Add open pokedex view for selected pokemon 
+          }} variant="outlined" sx={{border:0}} >
           <img className="card-image" src={monster.image} />
+          </Button>
        </div>
       )
     })
