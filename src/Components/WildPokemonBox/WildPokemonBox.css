@@ -17,6 +17,7 @@ margin-top:350px;
 }
 
 .card-image {
+  position:relative;
   width:150px;
   height: 150px;
 }
