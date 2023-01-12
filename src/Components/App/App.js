@@ -1,12 +1,21 @@
 import React, { useEffect, useState } from 'react';
 import './App.css'
 import Home from '../Home/Home';
-
+import theme from '../../theme';
+import { ThemeProvider } from '@mui/material/styles';
+import Pokedex from '../Pokedex/Pokedex';
 const App = () => {
   const [e, setError] = useState('')
   const [allPokemon, setAllPokemon] = useState([])
+  const [favPokemon, setFavPokemon] = useState([])
 
-
+  const addPokemon = (pokemon) => {
+    console.log(pokemon)
+      setFavPokemon([...favPokemon, pokemon]);
+  }
+  
+  
+  
   const fetchPokemon = () => {
     const promises = [];
     for (let i = 1; i <= 151; i++) {
@@ -30,7 +39,10 @@ const App = () => {
 
 
   return (
-    <Home allMons={allPokemon} ></Home>
+    <ThemeProvider theme={theme}>
+    <Home allMons={allPokemon} setFavMons={addPokemon}></Home>
+    <Pokedex favs={favPokemon}></Pokedex>
+    </ThemeProvider>
   )
 }
 

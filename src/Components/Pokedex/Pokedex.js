@@ -1,24 +1,34 @@
+import { Box } from '@mui/material';
 import React from 'react';
+import './Pokedex.css'
 
 
-const style = {
-  position: 'absolute',
-  top: '50%',
-  left: '50%',
-  transform: 'translate(-50%, -50%)',
-  width: 400,
-  bgcolor: 'red',
-  border: '2px solid #000',
-  boxShadow: 24,
-  p: 4,
-};
 
-const Pokedex = () => {
+
+const Pokedex = ({favs}) => {
+
   
   return (
-    <div>
- 
-    </div>
+    <Box  className='favsPage' sx={(theme) => ({
+      backgroundColor: 'red',
+      height: '50vh',
+      width: '80%',
+      zIndex:'2',
+      margin:'6%',
+      marginLeft:'8%'
+      
+    })} >
+      <h2 className='favsHeading'>Pokemon You Saved!</h2>
+      {favs.map((mon) => {
+        return (
+      <div className='singleFavMon'>
+        <h3 className='favName'>{mon.name}</h3>
+        <img className='pokeImage' src={mon.image}/>
+        <h4 className='pokeType'>{mon.type}</h4>
+      </div>
+        )
+      })}
+    </Box>
   );
 }
 
