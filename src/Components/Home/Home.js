@@ -1,5 +1,5 @@
 import React, { useRef } from 'react'
-import { Box } from '@mui/material';
+import { Box, Button } from '@mui/material';
 import logo from '../../Assets/pokeLogo.png'
 import './Home.css'
 import WildPokemonBox from '../WildPokemonBox/WildPokemonBox';

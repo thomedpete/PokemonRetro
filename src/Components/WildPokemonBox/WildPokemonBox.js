@@ -28,7 +28,7 @@ const WildPokemonBox = ({all151}) => {
         <div className="card" id={counter}>
           <Button onClick={() => {
             alert('clicked');//Add open pokedex view for selected pokemon 
-          }} variant="outlined" sx={{border:0}} >
+          }} variant="outlined" sx={{border:0,borderRadius:25,color:'red'}} >
           <img className="card-image" src={monster.image} />
           </Button>
        </div>
