@@ -1,9 +1,22 @@
 import { Button } from '@mui/material';
 import React, { useEffect, useState } from 'react';
 import './WildPokemonBox.css'
+import Pokedex from '../Pokedex/Pokedex';
 
 
-const WildPokemonBox = ({all151}) => {
+const WildPokemonBox = ({all151, setFav}) => {
+  
+  
+  const handleClick = (event,pokemonList) => {
+    const elementId = event.target.className;
+    const pokeID = Number(elementId);
+    const selectedPokemon = pokemonList.find(mon => { 
+      return mon.id === pokeID
+    })
+     setFav(selectedPokemon)
+      
+  }
+
 
   const setCurrentWild = (array) =>  {
     let currentWildArray = [];
@@ -25,11 +38,11 @@ const WildPokemonBox = ({all151}) => {
     const pokemonHTMLString = pokemon.map((monster) => {
       counter++;
       return (
-        <div className="card" id={counter}>
-          <Button onClick={() => {
-            alert('clicked');//Add open pokedex view for selected pokemon 
-          }} variant="outlined" sx={{border:0,borderRadius:25,color:'red'}} >
-          <img className="card-image" src={monster.image} />
+        <div className={`card card-${monster.id}`} key={monster.id} id={counter}>
+          <Button className={monster.id} key={monster.id} onClick={(event) => {
+            handleClick(event, all151)
+            }} variant="outlined" sx={{border:0,borderRadius:25,color:'red'}} >
+            <img className={`${monster.id}`} src={monster.image} />
           </Button>
        </div>
       )

@@ -6,8 +6,15 @@ import { ThemeProvider } from '@mui/material/styles';
 const App = () => {
   const [e, setError] = useState('')
   const [allPokemon, setAllPokemon] = useState([])
+  const [favPokemon, setFavPokemon] = useState([])
 
-
+  const addPokemon = (pokemon) => {
+    console.log(pokemon)
+      setFavPokemon([...favPokemon, pokemon]);
+  }
+  
+  
+  
   const fetchPokemon = () => {
     const promises = [];
     for (let i = 1; i <= 151; i++) {
@@ -32,7 +39,7 @@ const App = () => {
 
   return (
     <ThemeProvider theme={theme}>
-    <Home allMons={allPokemon} ></Home>
+    <Home allMons={allPokemon} setFavMons={addPokemon}></Home>
     </ThemeProvider>
   )
 }

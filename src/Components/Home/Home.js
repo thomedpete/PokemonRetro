@@ -6,13 +6,13 @@ import WildPokemonBox from '../WildPokemonBox/WildPokemonBox';
 
 
 
-const Home = ({ allMons }) => {
+const Home = ({ allMons, setFavMons }) => {
   return (
     <div className='home'>
       <Box className='logo-cont' ><img className='logo'
         src={logo}
         alt="Pokemon Logo"/></Box>
-      <WildPokemonBox all151={allMons}></WildPokemonBox>
+      <WildPokemonBox all151={allMons} setFav={setFavMons}></WildPokemonBox>
     </div> 
   )
 }
