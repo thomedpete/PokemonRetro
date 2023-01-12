@@ -39,7 +39,7 @@ const WildPokemonBox = ({all151, setFav}) => {
       counter++;
       return (
         <div className={`card card-${monster.id}`} key={monster.id} id={counter}>
-          <Button className={monster.id} key={monster.id} onClick={(event) => {
+          <Button  key={monster.id} onClick={(event) => {
             handleClick(event, all151)
             }} variant="outlined" sx={{border:0,borderRadius:25,color:'red'}} >
             <img className={`${monster.id}`} src={monster.image} />
