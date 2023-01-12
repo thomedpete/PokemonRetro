@@ -9,7 +9,7 @@ import WildPokemonBox from '../WildPokemonBox/WildPokemonBox';
 const Home = ({ allMons, setFavMons }) => {
   return (
     <div className='home'>
-      <Box className='logo-cont' ><img className='logo'
+      <Box className='logo-cont' zIndex={3} ><img className='logo'
         src={logo}
         alt="Pokemon Logo"/></Box>
       <WildPokemonBox all151={allMons} setFav={setFavMons}></WildPokemonBox>

@@ -3,6 +3,7 @@ import './App.css'
 import Home from '../Home/Home';
 import theme from '../../theme';
 import { ThemeProvider } from '@mui/material/styles';
+import Pokedex from '../Pokedex/Pokedex';
 const App = () => {
   const [e, setError] = useState('')
   const [allPokemon, setAllPokemon] = useState([])
@@ -40,6 +41,7 @@ const App = () => {
   return (
     <ThemeProvider theme={theme}>
     <Home allMons={allPokemon} setFavMons={addPokemon}></Home>
+    <Pokedex favs={favPokemon}></Pokedex>
     </ThemeProvider>
   )
 }
