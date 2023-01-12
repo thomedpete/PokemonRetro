@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import './App.css'
 import Home from '../Home/Home';
-
+import theme from '../../theme';
+import { ThemeProvider } from '@mui/material/styles';
 const App = () => {
   const [e, setError] = useState('')
   const [allPokemon, setAllPokemon] = useState([])
@@ -30,7 +31,9 @@ const App = () => {
 
 
   return (
+    <ThemeProvider theme={theme}>
     <Home allMons={allPokemon} ></Home>
+    </ThemeProvider>
   )
 }
 

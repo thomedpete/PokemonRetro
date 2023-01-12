@@ -1,4 +1,5 @@
 import React from 'react';
+import './Pokedex.css'
 
 
 const style = {
