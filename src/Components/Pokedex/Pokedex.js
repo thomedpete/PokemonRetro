@@ -5,21 +5,13 @@ import './Pokedex.css'
 
 
 
-const Pokedex = ({favs}) => {
+const Pokedex = ({favs, allMons}) => {
 
   
   return (
-    <Box  className='favsPage' sx={(theme) => ({
-      backgroundColor: 'red',
-      height: '50vh',
-      width: '80%',
-      zIndex:'2',
-      margin:'6%',
-      marginLeft:'8%'
-      
-    })} >
+    <div  className='favsPage' >
       <h2 className='favsHeading'>Pokemon You Saved!</h2>
-      {favs.map((mon) => {
+      {allMons.map((mon) => {
         return (
       <div className='singleFavMon'>
         <h3 className='favName'>{mon.name}</h3>
@@ -28,7 +20,7 @@ const Pokedex = ({favs}) => {
       </div>
         )
       })}
-    </Box>
+    </div>
   );
 }
 

@@ -6,15 +6,16 @@ import Home from '../Home/Home';
 import theme from '../../theme';
 import { ThemeProvider } from '@mui/material/styles';
 import Pokedex from '../Pokedex/Pokedex';
+
+
+
 const App = () => {
   const [allPokemon, setAllPokemon] = useState([])
   const [favPokemon, setFavPokemon] = useState([])
 
   const addPokemon = (pokemon) => {
-    console.log(pokemon)
       setFavPokemon([...favPokemon, pokemon]);
   }
-  
   
   
   const fetchPokemon = () => {
@@ -38,12 +39,12 @@ const App = () => {
   }, [])
 
 
-
   return (
     <ThemeProvider theme={theme}>
+      
     <Routes>
       <Route path='/' element={(<Home allMons={allPokemon} setFavMons={addPokemon}></Home>)}/>
-      <Route path="/pokedex" element={(<Pokedex favs={favPokemon}></Pokedex>)} />
+      <Route path="/pokedex" element={(<Pokedex favs={favPokemon} allMons={allPokemon}></Pokedex>)} />
       {/* <Route path='/*' element={()} /> */}
     </Routes>
     </ThemeProvider>

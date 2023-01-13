@@ -4,8 +4,8 @@
   align-content: flex-start;
   justify-content: space-evenly;
   contain: content;
-  overflow: scroll;
-  box-shadow: 10px 5px 5px grey;
+  overflow: hidden ;
+
 }
 
 .favsHeading {
