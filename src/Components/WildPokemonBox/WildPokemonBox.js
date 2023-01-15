@@ -14,7 +14,10 @@ const WildPokemonBox = ({all151, setFav,  setCaught, setCatch }) => {
     })
      setFav(selectedPokemon);
      setCaught([selectedPokemon]);
-     setCatch(true)   
+     setCatch(true)
+     setTimeout(() => {
+       setCatch(false)     
+    }, "3000");
   }
 
 
