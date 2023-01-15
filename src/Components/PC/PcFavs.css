@@ -1,0 +1,42 @@
+.wholePc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.pcPageHeader {
+  -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: #FFDE00;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 10vh;
+    font-weight: bolder;
+    color: #3B4CCA;
+}
+
+.favMonCard {
+  display: flex;
+  align-items: center;
+  width: 200px;
+  flex-direction: column;
+  box-shadow: 5px 3px 3px grey;
+  background-color: #0a3a7a9f;
+  margin: 3%;
+}
+.home-button-pc {
+  width:40%; 
+}
+
+@media screen and (max-width: 650px) {
+  
+  .favMonCard {
+    width: 150px;
+    margin:1%;
+  }
+}
+
+.pcBox {
+  display:flex;
+  flex-direction: row;
+  margin-top:5% ;
+  background: radial-gradient(circle, rgba(255, 222, 0, 1) 0%, rgba(204, 0, 0, 1) 63%, rgba(59, 76, 202, 1) 100%);
+}

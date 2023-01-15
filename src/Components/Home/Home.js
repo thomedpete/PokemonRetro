@@ -9,6 +9,7 @@ import logo from '../../Assets/pokeLogo.png'
 import './Home.css'
 import WildPokemonBox from '../WildPokemonBox/WildPokemonBox';
 import SingleMonDetails from '../SingleMonDetails/SingleMonDetails';
+import PcFavs from '../PC/PcFavs';
 
 const options = [
   {
@@ -18,6 +19,10 @@ const options = [
   {
     path: '/pokedex',
     text: 'Your Pokedex'
+  },
+  {
+    path: '/pc',
+    text: 'PC'
   }
  
 ];
