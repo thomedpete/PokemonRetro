@@ -17,7 +17,7 @@ const WildPokemonBox = ({all151, setFav,  setCaught, setCatch }) => {
      setCatch(true)
      setTimeout(() => {
        setCatch(false)     
-    }, "3000");
+    }, "30000");
   }
 
 
@@ -42,9 +42,9 @@ const WildPokemonBox = ({all151, setFav,  setCaught, setCatch }) => {
       counter++;
       return (
         <div className={`card card-${monster.id}`} key={monster.id} id={counter}>
-          <Button  key={monster.id} onClick={(event) => {
+          <Button className='wild-pokemon'  key={monster.id} onClick={(event) => {
             handleClick(event, all151)
-            }} variant="outlined" sx={{border:0,borderRadius:25,color:'red'}} >
+          }} variant="outlined" sx={{ border: 0, borderRadius: 25, color: 'red' }} >
             <img className={`${monster.id}`} src={monster.image} />
           </Button>
        </div>
