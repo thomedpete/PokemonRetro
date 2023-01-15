@@ -24,7 +24,7 @@ const options = [
 
 const ITEM_HEIGHT = 48;
 
-const Home = ({ allMons, setFavMons }) => {
+const Home = ({ allMons, setFavMons, current, setCurrent, caught, setCatch }) => {
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
   };
@@ -35,6 +35,9 @@ const Home = ({ allMons, setFavMons }) => {
   const open = Boolean(anchorEl);
   return (
     <div className='home'>
+      <Box className='logo-cont' zIndex={3} ><img className='logo'
+        src={logo}
+        alt="Pokemon Logo" /></Box>
       <IconButton
         aria-label="more"
         className='icon-button'
@@ -67,10 +70,11 @@ const Home = ({ allMons, setFavMons }) => {
           </MenuItem>
         ))}
       </Menu>
-      <Box className='logo-cont' zIndex={3} ><img className='logo'
-        src={logo}
-        alt="Pokemon Logo"/></Box>
-      <WildPokemonBox all151={allMons} setFav={setFavMons}></WildPokemonBox>
+      <div>
+        {caught ? <SingleMonDetails current={current}></SingleMonDetails> : <WildPokemonBox all151={allMons} setFav={setFavMons} current={current} setCaught={setCurrent} caught={caught} setCatch={setCatch}></WildPokemonBox>}
+      </div>
+    
+
     </div> 
   )
 }

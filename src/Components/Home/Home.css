@@ -10,6 +10,8 @@
 }
 
 #long-button {
+  margin-top:2vh;
+  margin-left:50vw;
   background-color: #FFDE00;
   color: #3B4CCA;
 }

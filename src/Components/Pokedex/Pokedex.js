@@ -1,4 +1,5 @@
-import { Box } from '@mui/material';
+import { Box, Button } from '@mui/material'; 
+import { Link } from 'react-router-dom';
 import React from 'react';
 import './Pokedex.css'
 
@@ -10,7 +11,9 @@ const Pokedex = ({favs, allMons}) => {
   
   return (
     <div  className='favsPage' >
-      <h2 className='favsHeading'>Pokemon You Saved!</h2>
+      <h2 className='favsHeading'>Pokedex</h2>
+      <Button className='home-button' variant='contained'> <Link className='home-link' to='/'>HOME</Link></Button>
+      <div className='dex'>
       {allMons.map((mon) => {
         return (
       <div className='singleFavMon'>
@@ -20,6 +23,7 @@ const Pokedex = ({favs, allMons}) => {
       </div>
         )
       })}
+      </div>
     </div>
   );
 }

@@ -1,5 +1,7 @@
 .favsPage {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   flex-wrap: wrap;
   align-content: flex-start;
   justify-content: space-evenly;
@@ -7,9 +9,16 @@
   overflow: hidden ;
 
 }
-
+.dex {
+  margin-left:2%;
+  display: flex;  
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
 .favsHeading {
-  color:#FFDE00;
+  font-size: 5vh;
+  color:#CC0000;
   margin-left:40%;
   margin-right:40%;
 }
@@ -21,6 +30,12 @@
   box-shadow: 5px 3px 3px grey;
   background-color:#354861;
   margin:2px;
+}
+
+.home-button {
+  width:30%;
+  margin-left: 30%;
+  background-color: #FFDE00;
 }
 
 .favName {

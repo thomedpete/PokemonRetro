@@ -1,10 +1,9 @@
 import { Button } from '@mui/material';
 import React, { useEffect, useState } from 'react';
 import './WildPokemonBox.css'
-import Pokedex from '../Pokedex/Pokedex';
 
 
-const WildPokemonBox = ({all151, setFav}) => {
+const WildPokemonBox = ({all151, setFav,  setCaught, setCatch }) => {
   
   
   const handleClick = (event,pokemonList) => {
@@ -13,8 +12,9 @@ const WildPokemonBox = ({all151, setFav}) => {
     const selectedPokemon = pokemonList.find(mon => { 
       return mon.id === pokeID
     })
-     setFav(selectedPokemon)
-      
+     setFav(selectedPokemon);
+     setCaught([selectedPokemon]);
+     setCatch(true)   
   }
 
 
@@ -53,7 +53,7 @@ const WildPokemonBox = ({all151, setFav}) => {
     
   return (
   <div className='wild'>
-      {displayPokemon(setCurrentWild(all151))}
+     {displayPokemon(setCurrentWild(all151))}  
   </div>
   )
 }
