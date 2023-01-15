@@ -5,6 +5,11 @@
   align-items: center;
 }
 
+.home-button {
+  width:60%; 
+  margin-bottom: 5%;
+}
+
 .pcBox {
   display:flex;
   flex-wrap: wrap;

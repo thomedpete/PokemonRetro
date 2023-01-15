@@ -9,8 +9,10 @@ const PcFavs = ({favs}) => {
 <div className='wholePc'>
   <h1 className='pcPageHeader'>Your PC</h1>
     <h4 className='subHeader'>The Pokemon you caught live here!</h4>
+    <Button className='home-button' variant='contained'> <Link className='home-link' to='/'>HOME</Link></Button>
   <div className='pcBox'>
     {favs.map((mon) => {
+      console.log(mon)
       return (
         <div className='singleFavMon'>
           <h3 className='favName'>{mon.name}</h3>

@@ -33,6 +33,7 @@ const App = () => {
       const pokemon = results.map((result) => ({
         name: stringFormat(result.name),
         image: result.sprites['front_default'],
+        weight: result.weight + 'kg',
         type: result.types.map((type) => type.type.name).join(', '),
         id: result.id
       }));
