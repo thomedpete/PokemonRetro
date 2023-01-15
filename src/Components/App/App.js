@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { Route, Routes } from 'react-router-dom'
-import Typography from '@mui/material/Typography';
 import './App.css'
 import Home from '../Home/Home';
 import theme from '../../theme';
 import { ThemeProvider } from '@mui/material/styles';
-import Link from '@mui/material/Link';
 import Pokedex from '../Pokedex/Pokedex';
+import PcFavs from '../PC/PcFavs';
 
 
 const stringFormat = (string) => {
@@ -51,6 +50,7 @@ const App = () => {
     <Routes>
       <Route path='/' element={(<Home allMons={allPokemon} setFavMons={addPokemon} current={currentCaughtPokemon} caught={isCaught} setCatch={setCatch} setCurrent={setCurrentCaught}></Home>)}/>
       <Route path="/pokedex" element={(<Pokedex favs={favPokemon} allMons={allPokemon}></Pokedex>)} />
+      <Route path='/pc' element={(<PcFavs favs={favPokemon}></PcFavs>)} />
       {/* <Route path='/*' element={()} /> */}
     </Routes>
       

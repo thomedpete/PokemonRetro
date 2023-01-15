@@ -1,0 +1,11 @@
+.wholePc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.pcBox {
+  display:flex;
+  flex-wrap: wrap;
+}
