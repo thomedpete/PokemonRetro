@@ -8,18 +8,10 @@ import { ThemeProvider } from '@mui/material/styles';
 import Link from '@mui/material/Link';
 import Pokedex from '../Pokedex/Pokedex';
 
-// const Copyright = () => {
-//   return (
-//     <Typography variant="body2" color="#FFCB5F" align="center">
-//       {'Copyright © '}
-//       <Link color="inherit" href="https://github.com/thomedpete/PokemonRetro">
-//         Pokemon Retro
-//       </Link>{' '}
-//       {new Date().getFullYear()}
-//       {'.'}
-//     </Typography>
-//   );
-// }
+
+const stringFormat = (string) => {
+  return string.charAt(0).toUpperCase() + string.slice(1);
+}
 
 const App = () => {
   const [allPokemon, setAllPokemon] = useState([])
@@ -40,7 +32,7 @@ const App = () => {
     }
     Promise.all(promises).then((results) => {
       const pokemon = results.map((result) => ({
-        name: result.name,
+        name: stringFormat(result.name),
         image: result.sprites['front_default'],
         type: result.types.map((type) => type.type.name).join(', '),
         id: result.id

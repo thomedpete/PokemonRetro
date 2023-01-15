@@ -3,12 +3,11 @@ import React from 'react';
 
 
 
-//maybe pass down favorites and leverage the fav array by grabbing index 0 every time, or set up a use state hook for the 
-//currrent caught pokemon whos data we can use  to display on page 
+ 
 const SingleMonDetails = ({current}) => {
   console.log(current)
   return ( 
-<div>
+       <div className='single-mon-page'>
    {current.map((mon) => {
  return <div key={mon.id} className='caughtPage' >
           <h2 className='caughtHeading'>You Caught {mon.name}!</h2> 
