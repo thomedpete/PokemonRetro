@@ -18,8 +18,8 @@
 
 .card-image {
   position:relative;
-  width:150px;
-  height: 150px;
+  width:300px;
+  height: 300px;
 }
 
 @keyframes bounce {
