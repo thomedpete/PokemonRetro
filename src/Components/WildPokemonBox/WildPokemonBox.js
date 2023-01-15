@@ -17,7 +17,7 @@ const WildPokemonBox = ({all151, setFav,  setCaught, setCatch }) => {
      setCatch(true)
      setTimeout(() => {
        setCatch(false)     
-    }, "30000");
+    }, "3000");
   }
 
 
