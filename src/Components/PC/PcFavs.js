@@ -23,7 +23,7 @@ const PcFavs = ({favs, setFav}) => {
           <img className='pcImage' src={mon.image} />
           <h5 className='weight'>Weight: {mon.weight}</h5>
           <h4 className='pcType'>Type: {mon.type}</h4>
-          <Button variant="contained" color="success" onClick={() => deletePokemon(mon)}>Release</Button>
+          <Button variant="contained" color="primary" onClick={() => deletePokemon(mon)}>Release From PC</Button>
         </div>
       )
     })}
