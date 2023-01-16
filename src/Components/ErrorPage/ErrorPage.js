@@ -11,7 +11,7 @@ const ErrorPage = () => {
       <h2 className='error-heading'>Oh No!</h2>
       <article className='error-message-cont'>
         <p className='error-message'>
-          This URL seems to be incorect please try again later <Link color="#F00000" href="/">Back To Wild Area</Link>!
+         404 This URL seems to be incorect please try again later 404 <Link color="#F00000" href="/">Back To Wild Area</Link>!
         </p>
       </article>
     </div>
