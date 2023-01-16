@@ -1,0 +1,23 @@
+.searchResultsPage {
+      display: flex;
+      width:100%;
+
+}
+
+.searchBar {
+      margin-left:100%;
+}
+.singleSearchDisplay {
+ 
+      display: flex;
+      width: 30%;
+      height: 30%;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 5px 3px 3px grey;
+      background: radial-gradient(circle, rgba(255, 222, 0, 1) 0%, rgba(204, 0, 0, 1) 63%, rgba(59, 76, 202, 1) 100%);
+      margin: 1%;
+ 
+}
+
