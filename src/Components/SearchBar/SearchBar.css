@@ -5,7 +5,8 @@
 }
 
 .searchBar {
-      margin-left:100%;
+      margin-left:43vw;
+      position:relative;
 }
 .singleSearchDisplay {
  
@@ -21,3 +22,30 @@
  
 }
 
+
+
+
+
+
+@media screen and (max-width: 1000px) {
+      .searchBar {
+            margin-top: 3%;
+            margin-left: 41vw;
+      }
+      
+}
+
+@media screen and (max-width: 800px) {
+      .searchBar {
+            margin-top: 3%;
+            margin-left: 39vw;
+      }
+      
+}
+@media screen and (max-width: 650px) {
+      .searchBar {
+            margin-top: 5%;
+            margin-left: 33vw;
+      }
+
+}

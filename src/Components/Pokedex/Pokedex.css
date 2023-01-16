@@ -11,7 +11,8 @@
 
 }
 .dex {
-  margin-left:2%;
+  display:flex;
+  justify-content: center;
   margin-top:5%;
   display: flex;  
   flex-direction: row;
@@ -20,10 +21,12 @@
 }
 
 @media screen and (max-width: 650px) {
-  .dex {
-     
-    margin-left: 8%;
+  .dex {  
+    
+   
+  
   }
+
 }
 
 .favsHeading {
@@ -40,10 +43,11 @@
 .singleFavMon {
   display: flex;
   width:200px;
+  margin:1%;
   flex-direction: column;
   box-shadow: 5px 3px 3px grey;
   background: radial-gradient(circle, rgba(255, 222, 0, 1) 0%, rgba(204, 0, 0, 1) 63%, rgba(59, 76, 202, 1) 100%);
-  margin:1%;
+  
 }
 
 .home-button {
