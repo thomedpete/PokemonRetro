@@ -9,6 +9,13 @@
   width:30%;
 }
 
+@media screen and (max-width: 650px) {
+  .logo {
+    margin-top:8%;
+    width:60%;   
+  }
+}
+
 #long-button {
   margin-top:2vh;
   margin-left:47vw;

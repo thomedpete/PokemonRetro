@@ -12,6 +12,14 @@
     font-weight: bolder;
     color: #3B4CCA;
 }
+.subHeader {
+  -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #FFDE00;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bolder;
+    color: #3B4CCA;
+  font-size: x-large;
+}
 
 .favMonCard {
   display: flex;
@@ -20,23 +28,65 @@
   flex-direction: column;
   box-shadow: 5px 3px 3px grey;
   background-color: #0a3a7a9f;
-  margin: 3%;
+  margin: 5%;
 }
 .home-button-pc {
   width:40%; 
+}
+
+@media screen and (max-width: 750px) {
+
+  .favMonCard {
+    width: 150px;
+    margin: 12%;
+  }
+
+  .pcBox {
+    width: 100%
+  }
+}
+
+
+@media screen and (max-width: 700px) {
+
+  .favMonCard {
+    width: 150px;
+    margin: 10%;
+  }
+
+  .pcBox {
+    width: 100%
+  }
 }
 
 @media screen and (max-width: 650px) {
   
   .favMonCard {
     width: 150px;
-    margin:1%;
+    margin:8%;
+  }
+  .pcBox {
+    width:100%
   }
 }
+
+@media screen and (max-width: 450px) {
+
+  .favMonCard {
+    width: 150px;
+    margin: 5%;
+  }
+
+  .pcBox {
+    width: 100%
+  }
+}
+
 
 .pcBox {
   display:flex;
   flex-direction: row;
+  flex-wrap: wrap;
   margin-top:5% ;
   background: radial-gradient(circle, rgba(255, 222, 0, 1) 0%, rgba(204, 0, 0, 1) 63%, rgba(59, 76, 202, 1) 100%);
 }

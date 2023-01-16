@@ -18,11 +18,11 @@ const options = [
   },
   {
     path: '/pokedex',
-    text: 'Your Pokedex'
+    text: 'Pokedex'
   },
   {
     path: '/pc',
-    text: 'PC'
+    text: 'PC(Caught Pokemon)'
   }
  
 ];
