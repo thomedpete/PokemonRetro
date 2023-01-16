@@ -14,13 +14,13 @@ const Pokedex = ({favs, allMons}) => {
   return (
     <div  className='favsPage' >
       <h2 className='favsHeading'>Pokedex</h2>
-      <Link className='home-link' to='/'><Button className='home-button' variant='contained'> HOME</Button></Link>
+      <Link className='home-link' to='/'><Button className='home-button' variant='contained'> Back To Wild Area</Button></Link>
       <SearchBar allMons={allMons}></SearchBar>
       <div className='dex' >
       {allMons.map((mon) => {
         return (
-      <div className='singleFavMon'>
-        <h3 className='favName'>{mon.name}</h3>
+          <div key={mon.id} className='singleFavMon'>
+        <h3  className='favName'>{mon.name}</h3>
         <img className='pokeImage' src={mon.image}/>
         <h4 className='pokeType'>Type: {mon.type}</h4>
       </div>
