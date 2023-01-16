@@ -22,6 +22,7 @@ const App = () => {
       setFavPokemon([...favPokemon, pokemon]);
   }
   
+ 
   
   const fetchPokemon = () => {
     const promises = [];
@@ -51,7 +52,7 @@ const App = () => {
     <Routes>
       <Route path='/' element={(<Home allMons={allPokemon} setFavMons={addPokemon} current={currentCaughtPokemon} caught={isCaught} setCatch={setCatch} setCurrent={setCurrentCaught}></Home>)}/>
       <Route path="/pokedex" element={(<Pokedex favs={favPokemon} allMons={allPokemon}></Pokedex>)} />
-      <Route path='/pc' element={(<PcFavs favs={favPokemon}></PcFavs>)} />
+        <Route path='/pc' element={(<PcFavs favs={favPokemon} setFav={setFavPokemon} ></PcFavs>)} />
       {/* <Route path='/*' element={()} /> */}
     </Routes>
       

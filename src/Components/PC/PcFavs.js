@@ -4,7 +4,12 @@ import React from 'react';
 import './PcFavs.css'
 
 
-const PcFavs = ({favs}) => {
+const PcFavs = ({favs, setFav}) => {
+  
+  const deletePokemon = (monToDelete) => {
+    setFav(favs.filter(pokemon => pokemon.name !== monToDelete.name));
+  }
+
   return ( 
 <div className='wholePc'>
   <h1 className='pcPageHeader'>Your PC</h1>
@@ -18,6 +23,7 @@ const PcFavs = ({favs}) => {
           <img className='pcImage' src={mon.image} />
           <h5 className='weight'>Weight: {mon.weight}</h5>
           <h4 className='pcType'>Type: {mon.type}</h4>
+          <Button variant="contained" color="success" onClick={() => deletePokemon(mon)}>Release</Button>
         </div>
       )
     })}
