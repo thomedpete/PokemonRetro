@@ -14,7 +14,7 @@ const SingleMonDetails = ({ current }) => {
       <Box className='logo-cont' zIndex={3} ><img className='logo'
         src={logo}
         alt="Pokemon Logo" /></Box>
-          <Link className='home-link' to='/'><Button className='home-button' variant='contained'> Back To Wild Area</Button></Link>
+          <Link className='home-button' to='/'><Button className='home-button' variant='contained'> Back To Wild Area</Button></Link>
       {current.map((mon) => {
         return <div key={mon.id} className='caughtMon' >
           <h2 className='caughtHeading'>You Caught {mon.name}!</h2>

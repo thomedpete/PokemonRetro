@@ -1,6 +1,13 @@
 describe('onLoad', () => {
   beforeEach(() => {
     cy.visit('http://localhost:3000')
+    cy.intercept(`https://pokeapi.co/api/v2/pokemon`,
+      {
+        'id': '1',
+        'name': 'bulbasaur',
+        'status': 200
+      }
+    )
   });
 
   it('Should see the logo of the page', () => {

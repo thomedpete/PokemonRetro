@@ -20,7 +20,7 @@ const options = [
   },
   {
     path: '/pc',
-    text: 'PC(Caught Pokemon)'
+    text: 'PC'
   }
  
 ];
