@@ -23,7 +23,7 @@ A simplified gen1 Pokemon Experince
 
 ## Set Up
 
-### Deployed at [dokes.surge.sh](https://dokes.surge.sh/)
+### Deployed at [pokemonretro.surge.sh](https://pokemonretro.surge.sh/)
 
 ### Local Installation
 1. Clone the repo
