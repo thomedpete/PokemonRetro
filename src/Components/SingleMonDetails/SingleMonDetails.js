@@ -1,6 +1,7 @@
 import { Box, Button } from '@mui/material';
 import { Link } from 'react-router-dom';
 import React from 'react';
+import PropTypes from 'prop-types';
 import './SingleMonDetails.css'
 import logo from '../../Assets/pokeLogo.png'
 
@@ -33,3 +34,6 @@ const SingleMonDetails = ({ current }) => {
 
 
 export default SingleMonDetails;
+SingleMonDetails.propTypes = {
+  current: PropTypes.object
+}
