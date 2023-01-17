@@ -9,9 +9,21 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 200px;
+  width: 30vw;
   flex-direction: column;
   box-shadow: 5px 3px 3px grey;
-  background-color: #354861;
+  background-color: #ce370d68;
+}
 
+@media screen and (max-width: 650px) {
+  .monInfo { 
+    width: 50vw;
+  }
+}
+
+.caughtImage {
+  width: 100%;
+}
+.home-button {
+  width:80%;
 }
