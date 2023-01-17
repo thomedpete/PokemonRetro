@@ -1,4 +1,5 @@
 import { Button } from '@mui/material';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import React from 'react';
 import './WildPokemonBox.css'
@@ -65,3 +66,9 @@ const WildPokemonBox = ({ all151, setFav, setCaught, setCatch }) => {
 }
 
 export default WildPokemonBox;
+WildPokemonBox.propTypes = {
+  all151: PropTypes.array, 
+  setFav: PropTypes.func, 
+  setCaught: PropTypes.func, 
+  setCatch: PropTypes.func
+}

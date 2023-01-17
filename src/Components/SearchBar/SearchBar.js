@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import './SearchBar.css'
 
 const SearchBar = ({ allMons }) => {
@@ -45,3 +46,6 @@ const SearchBar = ({ allMons }) => {
 };
 
 export default SearchBar;
+SearchBar.propTypes = {
+  allMons: PropTypes.array,
+}

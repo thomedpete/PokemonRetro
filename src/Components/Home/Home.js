@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import IconButton from '@mui/material/IconButton';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
+import PropTypes from 'prop-types';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import logo from '../../Assets/pokeLogo.png'
 import './Home.css'
@@ -84,3 +85,11 @@ const Home = ({ allMons, setFavMons, current, setCurrent, caught, setCatch }) =>
 
 
 export default Home;
+Home.propTypes = {
+  allMons: PropTypes.array, 
+  setFavMons: PropTypes.func,
+  current: PropTypes.object,
+  setCurrent: PropTypes.func, 
+  caught: PropTypes.object, 
+  setCatch: PropTypes.func
+}

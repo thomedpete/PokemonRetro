@@ -1,5 +1,6 @@
 import {  Button } from '@mui/material';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import React from 'react';
 import './Pokedex.css'
 import SearchBar from '../SearchBar/SearchBar'
@@ -8,7 +9,7 @@ import SearchBar from '../SearchBar/SearchBar'
 
 
 
-const Pokedex = ({ favs, allMons }) => {
+const Pokedex = ({ allMons }) => {
 
 
   return (
@@ -32,3 +33,6 @@ const Pokedex = ({ favs, allMons }) => {
 }
 
 export default Pokedex;
+Pokedex.propTypes = {
+  allMons: PropTypes.array
+}

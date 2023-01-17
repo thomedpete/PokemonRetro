@@ -1,5 +1,6 @@
 import {  Button } from '@mui/material';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import React from 'react';
 import './PcFavs.css'
 
@@ -32,3 +33,7 @@ const PcFavs = ({ favs, setFav }) => {
 }
 
 export default PcFavs;
+PcFavs.propTypes = {
+  favs: PropTypes.array,
+  setFav: PropTypes.func,
+}
