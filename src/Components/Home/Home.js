@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Box } from '@mui/material';
 import { Link } from 'react-router-dom';
 import IconButton from '@mui/material/IconButton';
@@ -8,8 +8,6 @@ import MoreVertIcon from '@mui/icons-material/MoreVert';
 import logo from '../../Assets/pokeLogo.png'
 import './Home.css'
 import WildPokemonBox from '../WildPokemonBox/WildPokemonBox';
-import SingleMonDetails from '../SingleMonDetails/SingleMonDetails';
-import PcFavs from '../PC/PcFavs';
 
 const options = [
   {
@@ -22,7 +20,7 @@ const options = [
   },
   {
     path: '/pc',
-    text: 'PC(Caught Pokemon)'
+    text: 'PC'
   }
  
 ];
@@ -76,7 +74,7 @@ const Home = ({ allMons, setFavMons, current, setCurrent, caught, setCatch }) =>
         ))}
       </Menu>
       <div>
-        {caught ? <SingleMonDetails current={current}></SingleMonDetails> : <WildPokemonBox all151={allMons} setFav={setFavMons} current={current} setCaught={setCurrent} caught={caught} setCatch={setCatch}></WildPokemonBox>}
+         <WildPokemonBox all151={allMons} setFav={setFavMons} current={current} setCaught={setCurrent} caught={caught} setCatch={setCatch}></WildPokemonBox>
       </div>
     
 

@@ -1,5 +1,6 @@
 import { Button } from '@mui/material';
-import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+import React from 'react';
 import './WildPokemonBox.css'
 
 
@@ -42,11 +43,13 @@ const WildPokemonBox = ({all151, setFav,  setCaught, setCatch }) => {
       counter++;
       return (
         <div className={`card card-${monster.id}`} key={monster.id} id={counter}>
-          <Button className='wild-pokemon'  key={monster.id} onClick={(event) => {
+          <Link className='current-link' to='/caught'>
+          <Button className={`wild-pokemon card-${counter}`}  key={monster.id} onClick={(event) => {
             handleClick(event, all151)
           }} variant="outlined" sx={{ border: 0, borderRadius: 25, color: 'red' }} >
             <img className={`${monster.id}`} src={monster.image} />
           </Button>
+        </Link>
        </div>
       )
     })

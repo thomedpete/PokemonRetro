@@ -14,7 +14,7 @@ const PcFavs = ({favs, setFav}) => {
 <div className='wholePc'>
   <h1 className='pcPageHeader'>Your PC</h1>
     <h4 className='subHeader'>The Pokemon you caught live here!</h4>
-    <Button className='home-button-pc'  variant='contained'> <Link className='home-link' to='/'>HOME</Link></Button>
+    <Link className='home-link' to='/'><Button className='home-button-pc'  variant='contained'> HOME</Button></Link>
   <div className='pcBox'>
     {favs.map((mon) => {
       return (

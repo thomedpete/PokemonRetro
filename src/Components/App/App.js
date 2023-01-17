@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { Route, Routes } from 'react-router-dom'
 import './App.css'
 import Home from '../Home/Home';
@@ -7,6 +7,7 @@ import { ThemeProvider } from '@mui/material/styles';
 import Pokedex from '../Pokedex/Pokedex';
 import PcFavs from '../PC/PcFavs';
 import ErrorPage from '../ErrorPage/ErrorPage'
+import SingleMonDetails from '../SingleMonDetails/SingleMonDetails';
 
 
 const stringFormat = (string) => {
@@ -49,10 +50,16 @@ const App = () => {
     }
   }
   
-      
+  const didMountRef = useRef(false);
+
   useEffect(() => {
-    fetchPokemon()
-  }, [])
+    if (!didMountRef.current) {
+      fetchPokemon();
+      didMountRef.current = true;
+    }
+  }, []);
+      
+
 
 
   return (
@@ -61,6 +68,7 @@ const App = () => {
     <Routes>
       <Route path='/' element={(<Home allMons={allPokemon} setFavMons={addPokemon} current={currentCaughtPokemon} caught={isCaught} setCatch={setCatch} setCurrent={setCurrentCaught}></Home>)}/>
       <Route path="/pokedex" element={(<Pokedex favs={favPokemon} allMons={allPokemon}></Pokedex>)} />
+      <Route path="/caught" element={(<SingleMonDetails current={currentCaughtPokemon}></SingleMonDetails>)} />
       <Route path='/pc' element={(<PcFavs favs={favPokemon} setFav={setFavPokemon} ></PcFavs>)} />
       <Route path='/*' element={(<ErrorPage></ErrorPage>)} />
     </Routes>

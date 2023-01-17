@@ -21,6 +21,7 @@ const SearchBar = ({ allMons }) => {
   return (
     
     <div className='searchResultsPage'>
+      <div className='justSearch'>
       <form >
         <input
           className='searchBar'
@@ -30,7 +31,7 @@ const SearchBar = ({ allMons }) => {
           onChange={handleChange}
         />
       </form>
-   
+     </div>
       {searchResults.map(item => (
         <div className='singleSearchDisplay' key={item.id}>
           <h2>{item.name}</h2>
