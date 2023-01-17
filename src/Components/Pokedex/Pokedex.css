@@ -7,14 +7,15 @@
   align-content: flex-start;
   justify-content: space-evenly;
   contain: content;
-  overflow: hidden ;
+  overflow: hidden;
 
 }
+
 .dex {
-  display:flex;
+  display: flex;
   justify-content: center;
-  margin-top:5%;
-  display: flex;  
+  margin-top: 5%;
+  display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   width: 100%;
@@ -23,37 +24,37 @@
 
 .favsHeading {
   -webkit-text-stroke-width: 3px;
-  -webkit-text-stroke-color:#FFDE00;
+  -webkit-text-stroke-color: #FFDE00;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-size: 10vh;
   font-weight: bolder;
-  color:#3B4CCA;
+  color: #3B4CCA;
 }
 
 .singleFavMon {
   display: flex;
-  width:200px;
-  margin:1%;
+  width: 200px;
+  margin: 1%;
   flex-direction: column;
   box-shadow: 5px 3px 3px grey;
   background: radial-gradient(circle, rgba(255, 222, 0, 1) 0%, rgba(204, 0, 0, 1) 63%, rgba(59, 76, 202, 1) 100%);
-  
+
 }
 
 .home-link {
-  width:40%; 
-  margin-left:25%;
+  width: 40%;
+  margin-left: 25%;
   margin-bottom: 3%;
 }
 
 .favName {
-  margin-left:30%;
+  margin-left: 30%;
 }
 
 .pokeImage {
-  height:80%;
-  width:80%;
-  padding:0px;
+  height: 80%;
+  width: 80%;
+  padding: 0px;
 }
 
 .pokeType {

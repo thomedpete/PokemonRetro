@@ -16,7 +16,7 @@
 }
 
 @media screen and (max-width: 650px) {
-  .monInfo { 
+  .monInfo {
     width: 50vw;
   }
 }
@@ -24,8 +24,8 @@
 .caughtImage {
   width: 100%;
 }
+
 .home-button {
   margin-left: 30%;
-  width:40%;
+  width: 40%;
 }
-

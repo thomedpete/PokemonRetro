@@ -1,18 +1,18 @@
 .searchResultsPage {
       display: flex;
       justify-content: center;
-      width:100%;
+      width: 100%;
 
 }
 
 .searchBar {
-      margin-left:2%;
-      position:relative;
-      margin-bottom:2%;
+      margin-left: 2%;
+      position: relative;
+      margin-bottom: 2%;
 }
 
 .singleSearchDisplay {
- 
+
       display: flex;
       width: 30%;
       height: 30%;
@@ -22,7 +22,7 @@
       box-shadow: 5px 3px 3px grey;
       background: radial-gradient(circle, rgba(255, 222, 0, 1) 0%, rgba(204, 0, 0, 1) 63%, rgba(59, 76, 202, 1) 100%);
       margin: 1%;
- 
+
 }
 
 
@@ -35,7 +35,7 @@
             margin-top: 3%;
             margin-left: 41vw;
       }
-      
+
 }
 
 @media screen and (max-width: 800px) {
@@ -43,8 +43,9 @@
             margin-top: 3%;
             margin-left: 39vw;
       }
-      
+
 }
+
 @media screen and (max-width: 650px) {
       .searchBar {
             margin-top: 5%;

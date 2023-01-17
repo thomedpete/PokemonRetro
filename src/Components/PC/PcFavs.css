@@ -4,20 +4,22 @@
   justify-content: center;
   align-items: center;
 }
+
 .pcPageHeader {
   -webkit-text-stroke-width: 3px;
-    -webkit-text-stroke-color: #FFDE00;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 10vh;
-    font-weight: bolder;
-    color: #3B4CCA;
+  -webkit-text-stroke-color: #FFDE00;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 10vh;
+  font-weight: bolder;
+  color: #3B4CCA;
 }
+
 .subHeader {
   -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: #FFDE00;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-weight: bolder;
-    color: #3B4CCA;
+  -webkit-text-stroke-color: #FFDE00;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: bolder;
+  color: #3B4CCA;
   font-size: x-large;
 }
 
@@ -30,16 +32,18 @@
   background-color: #0a3a7a9f;
   margin: 5%;
 }
+
 .home-button-pc {
-  width:40%; 
+  width: 40%;
 }
+
 .pcBox {
-  display:flex;
+  display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  margin-top:5% ;
+  margin-top: 5%;
   background: radial-gradient(circle, rgba(255, 222, 0, 1) 0%, rgba(204, 0, 0, 1) 63%, rgba(59, 76, 202, 1) 100%);
 }
 
@@ -69,13 +73,14 @@
 }
 
 @media screen and (max-width: 650px) {
-  
+
   .favMonCard {
     width: 150px;
-    margin:8%;
+    margin: 8%;
   }
+
   .pcBox {
-    width:100%
+    width: 100%
   }
 }
 
@@ -90,4 +95,3 @@
     width: 100%
   }
 }
-

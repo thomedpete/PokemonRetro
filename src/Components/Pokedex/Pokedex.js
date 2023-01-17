@@ -1,4 +1,4 @@
-import { Box, Button } from '@mui/material'; 
+import {  Button } from '@mui/material';
 import { Link } from 'react-router-dom';
 import React from 'react';
 import './Pokedex.css'
@@ -8,24 +8,24 @@ import SearchBar from '../SearchBar/SearchBar'
 
 
 
-const Pokedex = ({favs, allMons}) => {
+const Pokedex = ({ favs, allMons }) => {
 
-  
+
   return (
-    <div  className='favsPage' >
+    <div className='favsPage' >
       <h2 className='favsHeading'>Pokedex</h2>
       <Link className='home-link' to='/'><Button className='home-button' variant='contained'> Back To Wild Area</Button></Link>
       <SearchBar allMons={allMons}></SearchBar>
       <div className='dex' >
-      {allMons.map((mon) => {
-        return (
-          <div key={mon.id} className='singleFavMon'>
-        <h3  className='favName'>{mon.name}</h3>
-        <img className='pokeImage' src={mon.image}/>
-        <h4 className='pokeType'>Type: {mon.type}</h4>
-      </div>
-        )
-      })}
+        {allMons.map((mon) => {
+          return (
+            <div key={mon.id} className='singleFavMon'>
+              <h3 className='favName'>{mon.name}</h3>
+              <img className='pokeImage' src={mon.image} alt={mon.name} />
+              <h4 className='pokeType'>Type: {mon.type}</h4>
+            </div>
+          )
+        })}
       </div>
     </div>
   );

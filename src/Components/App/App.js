@@ -23,12 +23,12 @@ const App = () => {
   const [errorMessage, setErrorMessage] = useState("")
 
   const addPokemon = (pokemon) => {
-      setFavPokemon([...favPokemon, pokemon]);
+    setFavPokemon([...favPokemon, pokemon]);
   }
-  
- 
-  
-  const fetchPokemon =  async () => {
+
+
+
+  const fetchPokemon = async () => {
     const promises = [];
     for (let i = 1; i <= 151; i++) {
       const url = `https://pokeapi.co/api/v2/pokemon/${i}`;
@@ -49,7 +49,7 @@ const App = () => {
       setErrorMessage('Sorry, the Pokemon API is down at the moment please try again later.')
     }
   }
-  
+
   const didMountRef = useRef(false);
 
   useEffect(() => {
@@ -58,21 +58,21 @@ const App = () => {
       didMountRef.current = true;
     }
   }, []);
-      
+
 
 
 
   return (
     <ThemeProvider theme={theme}>
       {fetchError && <p className='fetchError'>{errorMessage}</p>}
-    <Routes>
-      <Route path='/' element={(<Home allMons={allPokemon} setFavMons={addPokemon} current={currentCaughtPokemon} caught={isCaught} setCatch={setCatch} setCurrent={setCurrentCaught}></Home>)}/>
-      <Route path="/pokedex" element={(<Pokedex favs={favPokemon} allMons={allPokemon}></Pokedex>)} />
-      <Route path="/caught" element={(<SingleMonDetails current={currentCaughtPokemon}></SingleMonDetails>)} />
-      <Route path='/pc' element={(<PcFavs favs={favPokemon} setFav={setFavPokemon} ></PcFavs>)} />
-      <Route path='/*' element={(<ErrorPage></ErrorPage>)} />
-    </Routes>
-      
+      <Routes>
+        <Route path='/' element={(<Home allMons={allPokemon} setFavMons={addPokemon} current={currentCaughtPokemon} caught={isCaught} setCatch={setCatch} setCurrent={setCurrentCaught}></Home>)} />
+        <Route path="/pokedex" element={(<Pokedex favs={favPokemon} allMons={allPokemon}></Pokedex>)} />
+        <Route path="/caught" element={(<SingleMonDetails current={currentCaughtPokemon}></SingleMonDetails>)} />
+        <Route path='/pc' element={(<PcFavs favs={favPokemon} setFav={setFavPokemon} ></PcFavs>)} />
+        <Route path='/*' element={(<ErrorPage></ErrorPage>)} />
+      </Routes>
+
     </ThemeProvider>
   )
 }

@@ -22,7 +22,7 @@ const options = [
     path: '/pc',
     text: 'PC'
   }
- 
+
 ];
 
 const ITEM_HEIGHT = 48;
@@ -74,11 +74,11 @@ const Home = ({ allMons, setFavMons, current, setCurrent, caught, setCatch }) =>
         ))}
       </Menu>
       <div>
-         <WildPokemonBox all151={allMons} setFav={setFavMons} current={current} setCaught={setCurrent} caught={caught} setCatch={setCatch}></WildPokemonBox>
+        <WildPokemonBox all151={allMons} setFav={setFavMons} current={current} setCaught={setCurrent} caught={caught} setCatch={setCatch}></WildPokemonBox>
       </div>
-    
 
-    </div> 
+
+    </div>
   )
 }
 

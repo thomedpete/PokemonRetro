@@ -1,21 +1,22 @@
 .wild {
-display: flex;
+  display: flex;
   flex-direction: column-reverse;
   justify-content: center;
   flex-wrap: wrap;
-  margin-top:10%; 
+  margin-top: 10%;
   width: 100vw;
   height: 70vh;
   align-content: space-around;
 
- 
+
 }
+
 .wild-pokemon {
   cursor: url('../../Assets/pokeCurser.png') auto;
 }
 
 .card {
- margin-top:100px;
+  margin-top: 100px;
 }
 
 
@@ -24,8 +25,8 @@ display: flex;
 }
 
 .card-image {
-  position:relative;
-  width:300px;
+  position: relative;
+  width: 300px;
   height: 300px;
 }
 
@@ -55,41 +56,3 @@ display: flex;
   }
 }
 
-
-
-
-
-
-
-
-
-
-
-/* [id="1"] {
-  margin-right: 10px;
-  margin-top: 80px;
-}
-
-[id="2"] {
-    margin-right: 30px;
-}
-
-[id="3"] {
-    margin-right: 123px;
-    margin-top: 90px;
-}
-
-[id="4"] {
-    margin-top: 92px;
-    margin-right: 87px;
-}
-
-[id="5"] {
-  margin-top: 92px;
-    margin-right: 109px;
-}
-
-[id="6"] {
-  margin-top: 132px;
-    margin-left: -10px;
-} */
