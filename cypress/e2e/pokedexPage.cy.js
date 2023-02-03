@@ -1,10 +1,11 @@
+/* eslint-disable no-undef */
 describe('Visiting the Pokedex Page', () => {
   beforeEach(() => {
-    cy.visit('http://localhost:3000/pokedex')
+    cy.visit('/pokedex')
   })
 
   it('user should see a pokedex page ', () => {
-      cy.url().should('eq', 'http://localhost:3000/pokedex')
+    cy.url().should('include', '/pokedex')
   })
 
   it('user should see a list of pokemon displayed ', () => {
@@ -17,12 +18,7 @@ describe('Visiting the Pokedex Page', () => {
   })
 
   it('User should be able to navigate home using the home button', () => {
-    cy.visit('http://localhost:3000/caught')
-      .url().should('eq', 'http://localhost:3000/caught')
-    cy.get('.MuiButtonBase-root').click()
-      .url().should('eq', 'http://localhost:3000/')
-
+    cy.visit('/caught').url().should('include', '/caught')
+    cy.get('.MuiButtonBase-root').click().url().should('include', '/')
   })
-
-
-}) 
+})
