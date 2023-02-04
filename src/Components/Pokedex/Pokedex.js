@@ -21,7 +21,7 @@ const Pokedex = ({ allMons }) => {
         {allMons.map((mon) => {
           return (
             <div key={mon.id} className='singleFavMon'>
-              <h3 className='favName'>{mon.name}</h3>
+              <h3 className='favName' data-testid={`pokemon-${mon.name}`}>{mon.name}</h3>
               <img className='pokeImage' src={mon.image} alt={mon.name} />
               <h4 className='pokeType'>Type: {mon.type}</h4>
             </div>

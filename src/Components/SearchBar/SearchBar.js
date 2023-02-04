@@ -27,6 +27,7 @@ const SearchBar = ({ allMons }) => {
           <input
             className='searchBar'
             type="text"
+            data-testid={`search-field`}
             placeholder="Type Enter To Clear Search"
             value={searchTerm}
             onChange={handleChange}
