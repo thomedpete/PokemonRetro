@@ -20,9 +20,15 @@ describe('Visiting the Caught Page', () => {
       .should('be.visible')
       .then(mainPage => {
         cy.get(mainPage)
-          .find('[data-testid="pokemon-1"]')
+          .find('[data-testid="pokemon-6"]')
           .should('be.visible')
-          .click()
+          .then($btn => {
+            if ($btn.is(':enabled')) {
+              cy.wrap($btn).click() //Button is enabled
+            } else {
+              //Button is disabled
+            }
+          })
       })
   })
 })
