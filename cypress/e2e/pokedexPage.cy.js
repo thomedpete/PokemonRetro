@@ -9,16 +9,19 @@ describe('Visiting the Pokedex Page', () => {
   })
 
   it('user should see a list of pokemon displayed ', () => {
-    cy.get(':nth-child(1) > .favName').contains('Bulbasaur')
-    cy.get(':nth-child(2) > .favName').contains('Ivysaur')
+    cy.contains('[data-testid="pokemon-Bulbasaur"]', 'Bulbasaur')
+    cy.contains('[data-testid="pokemon-Ivysaur"]', 'Ivysaur')
   })
 
   it('user should be able to search the dex ', () => {
-    cy.get('.searchBar').type('mew').type('{enter}')
+    cy.get('[data-testid="search-field"]').type('mew').type('{enter}')
   })
 
   it('User should be able to navigate home using the home button', () => {
     cy.visit('/caught').url().should('include', '/caught')
-    cy.get('.MuiButtonBase-root').click().url().should('include', '/')
+    cy.get('[data-testid="back-to-wild-area-button"]')
+      .click()
+      .url()
+      .should('include', '/')
   })
 })
