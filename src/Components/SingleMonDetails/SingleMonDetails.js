@@ -20,7 +20,7 @@ const SingleMonDetails = ({ current }) => {
         return <div key={mon.id} className='caughtMon' >
           <h2 className='caughtHeading'>You Caught {mon.name}!</h2>
           <h3 className='caughtHeading'>{mon.name} will be added to your PC</h3>
-          <div className='monInfo'>
+          <div className='monInfo' data-testid={`pokemon-info`}>
             <h3 className='caughtName'>{mon.name}</h3>
             <img className='caughtImage' src={mon.image} alt={mon.name} />
             <h4 className='caughtType'>{mon.type}</h4>
