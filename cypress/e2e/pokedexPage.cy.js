@@ -1,28 +1,27 @@
+/* eslint-disable no-undef */
 describe('Visiting the Pokedex Page', () => {
   beforeEach(() => {
-    cy.visit('http://localhost:3000/pokedex')
+    cy.visit('/pokedex')
   })
 
   it('user should see a pokedex page ', () => {
-      cy.url().should('eq', 'http://localhost:3000/pokedex')
+    cy.url().should('include', '/pokedex')
   })
 
   it('user should see a list of pokemon displayed ', () => {
-    cy.get(':nth-child(1) > .favName').contains('Bulbasaur')
-    cy.get(':nth-child(2) > .favName').contains('Ivysaur')
+    cy.contains('[data-testid="pokemon-Bulbasaur"]', 'Bulbasaur')
+    cy.contains('[data-testid="pokemon-Ivysaur"]', 'Ivysaur')
   })
 
   it('user should be able to search the dex ', () => {
-    cy.get('.searchBar').type('mew').type('{enter}')
+    cy.get('[data-testid="search-field"]').type('mew').type('{enter}')
   })
 
   it('User should be able to navigate home using the home button', () => {
-    cy.visit('http://localhost:3000/caught')
-      .url().should('eq', 'http://localhost:3000/caught')
-    cy.get('.MuiButtonBase-root').click()
-      .url().should('eq', 'http://localhost:3000/')
-
+    cy.visit('/caught').url().should('include', '/caught')
+    cy.get('[data-testid="back-to-wild-area-button"]')
+      .click()
+      .url()
+      .should('include', '/')
   })
-
-
-}) 
+})

@@ -41,10 +41,11 @@ const Home = ({ allMons, setFavMons, current, setCurrent, caught, setCatch }) =>
     <div className='home'>
       <Box className='logo-cont' zIndex={3} ><img className='logo'
         src={logo}
-        alt="Pokemon Logo" /></Box>
+        alt="Pokemon Logo" data-testid={`pokemon-logo`} /></Box>
       <IconButton
         aria-label="more"
         className='icon-button'
+        data-testid={`menu-button`}
         id="long-button"
         aria-controls={open ? 'long-menu' : undefined}
         aria-expanded={open ? 'true' : undefined}
@@ -70,7 +71,7 @@ const Home = ({ allMons, setFavMons, current, setCurrent, caught, setCatch }) =>
       >
         {options.map((option) => (
           <MenuItem id={option.text} key={option.path} selected={option === 'Pyxis'} onClick={handleClose}>
-            <Link className='little-link' to={option.path}>{option.text}</Link>
+            <Link className='little-link' data-testid={`${option.text}-button`} to={option.path}>{option.text}</Link>
           </MenuItem>
         ))}
       </Menu>

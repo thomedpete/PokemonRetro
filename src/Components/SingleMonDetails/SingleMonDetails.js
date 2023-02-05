@@ -15,12 +15,12 @@ const SingleMonDetails = ({ current }) => {
       <Box className='logo-cont' zIndex={3} ><img className='logo'
         src={logo}
         alt="Pokemon Logo" /></Box>
-      <Link className='home-button' to='/'><Button className='home-button' variant='contained'> Back To Wild Area</Button></Link>
+      <Link className='home-button' to='/'><Button className='home-button' data-testid={`back-to-wild-area-button`} variant='contained'> Back To Wild Area</Button></Link>
       {current.map((mon) => {
         return <div key={mon.id} className='caughtMon' >
           <h2 className='caughtHeading'>You Caught {mon.name}!</h2>
           <h3 className='caughtHeading'>{mon.name} will be added to your PC</h3>
-          <div className='monInfo'>
+          <div className='monInfo' data-testid={`pokemon-info`}>
             <h3 className='caughtName'>{mon.name}</h3>
             <img className='caughtImage' src={mon.image} alt={mon.name} />
             <h4 className='caughtType'>{mon.type}</h4>

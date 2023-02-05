@@ -43,8 +43,8 @@ const WildPokemonBox = ({ all151, setFav, setCaught, setCatch }) => {
     const pokemonHTMLString = pokemon.map((monster) => {
       counter++;
       return (
-        <div className={`card card-${monster.id}`} key={monster.id} id={counter}>
-          <Link className='current-link' to='/caught'>
+        <div className={`card card-${monster.id}`} data-testid={`pokemons`} key={monster.id} id={counter}>
+          <Link className='current-link' data-testid={`pokemon-${counter}`} to='/caught'>
             <Button className={`wild-pokemon card-${counter}`} key={monster.id} onClick={(event) => {
               handleClick(event, all151)
             }} variant="outlined" sx={{ border: 0, borderRadius: 25, color: 'red' }} >
@@ -59,7 +59,7 @@ const WildPokemonBox = ({ all151, setFav, setCaught, setCatch }) => {
 
 
   return (
-    <div className='wild'>
+    <div className='wild' data-testid={`pokemons-lists`}>
       {displayPokemon(setCurrentWild(all151))}
     </div>
   )
