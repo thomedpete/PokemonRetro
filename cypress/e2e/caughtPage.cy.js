@@ -5,6 +5,10 @@ describe('Visiting the Caught Page', () => {
     cy.intercept('**/pokemon/151').as('pokemon_api')
   })
 
+  const poekmonList = '[data-testid="pokemons-lists"]'
+  const getPokemon = '[data-testid="pokemons"]'
+  const pokemonAtSixthPosition = '[data-testid="pokemon-6"]'
+
   it('user should see a caught page ', () => {
     cy.visit('/caught').url().should('include', '/caught')
   })
@@ -14,13 +18,13 @@ describe('Visiting the Caught Page', () => {
       .wait('@pokemon_api')
       .its('response.statusCode')
       .should('eq', 200)
-    cy.get('[data-testid="pokemons-lists"]')
-      .find('[data-testid="pokemons"]')
+    cy.get(poekmonList)
+      .find(getPokemon)
       .should('have.length', 6)
       .should('be.visible')
       .then(mainPage => {
         cy.get(mainPage)
-          .find('[data-testid="pokemon-6"]')
+          .find(pokemonAtSixthPosition)
           .should('be.visible')
           .then($btn => {
             if ($btn.is(':enabled')) {
